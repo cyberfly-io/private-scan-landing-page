@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Private Scan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { dark: '#0F0F1A', purple: '#8B5CF6' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-white font-sans selection:bg-brand-purple">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center glass rounded-2xl px-6 py-3">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="app_icon.jpg" alt="Private Scan Icon" class="w-10 h-10 rounded-xl object-cover" onerror="this.onerror=null; this.outerHTML='<div class=\'w-10 h-10 bg-brand-purple rounded-xl flex items-center justify-center font-black text-white\'>P</div>';">
+                <span class="text-xl font-heading font-extrabold tracking-tight">Private<span class="text-brand-purple">Scan</span></span>
+            </a>
+            <a href="index.html" class="text-sm font-medium text-gray-400 hover:text-white transition">Back to Home</a>
+        </div>
+    </nav>
+
+    <div class="pt-44 pb-24 px-6">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-5xl font-heading font-black mb-8">Privacy Policy</h1>
+            <div class="glass p-10 rounded-3xl space-y-8 text-gray-300 leading-relaxed shadow-2xl">
+                <section>
+                    <p class="text-sm text-brand-purple font-bold uppercase tracking-widest mb-2">Last Updated</p>
+                    <p class="text-white">December 26, 2025</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold text-white mb-4">1. Zero-Knowledge Architecture</h2>
+                    <p>At Private Scan, we believe your data belongs to you. This application operates with a "Zero-Knowledge" architecture. We do not collect, store, or transmit any personal data, documents, or images processed by the application.</p>
+                </section>
+                
+                <section>
+                    <h2 class="text-xl font-bold text-white mb-4">2. Local-Only Processing</h2>
+                    <p>All OCR (Optical Character Recognition) operations are performed locally on your device using our proprietary Rust engine. Our application is designed to function entirely without an internet connection for core tasks.</p>
+                </section>
+                
+                <section>
+                    <h2 class="text-xl font-bold text-white mb-4">3. Third-Party Services</h2>
+                    <p>We do not use third-party tracking, analytics, or advertising SDKs. The only internet communication occurs during optional translation downloads or payment processing handled by the Google Play Store securely.</p>
+                </section>
+                
+                <section>
+                    <h2 class="text-xl font-bold text-white mb-4">4. Your Consent</h2>
+                    <p>By using Private Scan, you acknowledge that your data is stored solely on your device and you are responsible for its backup and security.</p>
+                </section>
+                
+                <div class="pt-8 border-t border-white/5">
+                    <a href="index.html" class="inline-flex items-center gap-2 text-brand-purple font-bold hover:gap-3 transition-all">
+                        <span>←</span> Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
