@@ -89,9 +89,6 @@
             opacity: 1;
             transform: translateY(0);
         }
-
-        .page-content { display: none; }
-        .page-content.active { display: block; }
     </style>
 </head>
 <body class="bg-brand-dark text-white selection:bg-brand-purple selection:text-white">
@@ -99,25 +96,25 @@
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center glass rounded-2xl px-6 py-3">
-            <button onclick="navigateTo('home')" class="flex items-center gap-3 group">
+            <a href="index.html" class="flex items-center gap-3 group">
                 <img src="app_icon.jpg" alt="Private Scan Icon" class="w-10 h-10 rounded-xl shadow-lg group-hover:rotate-6 transition-transform object-cover" onerror="this.onerror=null; this.outerHTML='<div class=\'w-10 h-10 bg-gradient-to-br from-brand-purple to-brand-cyan rounded-xl flex items-center justify-center font-black text-white shadow-lg group-hover:rotate-6 transition-transform\'>P</div>';">
                 <span class="text-xl font-heading font-extrabold tracking-tight">Private<span class="text-brand-purple">Scan</span></span>
-            </button>
+            </a>
             
             <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
-                <button onclick="navigateTo('home')" class="hover:text-white transition">Home</button>
-                <a href="#features" class="hover:text-white transition landing-link">Features</a>
-                <a href="#pricing" class="hover:text-white transition landing-link">Pricing</a>
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <a href="#features" class="hover:text-white transition">Features</a>
+                <a href="#pricing" class="hover:text-white transition">Pricing</a>
             </div>
 
-            <a href="#download" class="bg-brand-purple hover:bg-opacity-90 px-5 py-2.5 rounded-xl font-bold text-sm transition-all shadow-lg shadow-brand-purple/20 active:scale-95 landing-link">
+            <a href="#download" class="bg-brand-purple hover:bg-opacity-90 px-5 py-2.5 rounded-xl font-bold text-sm transition-all shadow-lg shadow-brand-purple/20 active:scale-95">
                 Download Now
             </a>
         </div>
     </nav>
 
     <!-- Main Landing Page Content -->
-    <div id="home-page" class="page-content active">
+    <main>
         <!-- Hero Section -->
         <section class="relative pt-44 pb-24 px-6 overflow-hidden hero-mesh">
             <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
@@ -270,72 +267,22 @@
                 </button>
             </div>
         </section>
-    </div>
-
-    <!-- Privacy Policy Page -->
-    <div id="privacy-page" class="page-content pt-32 pb-24 px-6">
-        <div class="max-w-3xl mx-auto">
-            <h1 class="text-4xl font-heading font-black mb-8">Privacy Policy</h1>
-            <div class="glass p-10 rounded-3xl space-y-6 text-gray-300 leading-relaxed">
-                <p><strong>Effective Date:</strong> December 26, 2025</p>
-                <p>At Private Scan, we believe your data belongs to you. This policy outlines how our application operates with a "Zero-Knowledge" architecture.</p>
-                
-                <h3 class="text-xl font-bold text-white">1. No Data Collection</h3>
-                <p>Private Scan does not collect, store, or transmit any personal data, documents, or images processed by the application. All OCR (Optical Character Recognition) operations are performed locally on your device.</p>
-                
-                <h3 class="text-xl font-bold text-white">2. Offline-First Architecture</h3>
-                <p>Our Rust engine is designed to function entirely without an internet connection. No document data ever leaves the secure enclave of your smartphone.</p>
-                
-                <h3 class="text-xl font-bold text-white">3. Third-Party Services</h3>
-                <p>We do not use third-party tracking, analytics, or advertising SDKs. The only internet communication occurs during optional translation downloads or payment processing handled by the Google Play Store.</p>
-                
-                <h3 class="text-xl font-bold text-white">4. Your Consent</h3>
-                <p>By using Private Scan, you acknowledge that your data is stored solely on your device and you are responsible for its backup and security.</p>
-                
-                <button onclick="navigateTo('home')" class="mt-8 text-brand-purple font-bold hover:underline">← Back to Home</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Terms of Service Page -->
-    <div id="terms-page" class="page-content pt-32 pb-24 px-6">
-        <div class="max-w-3xl mx-auto">
-            <h1 class="text-4xl font-heading font-black mb-8">Terms of Service</h1>
-            <div class="glass p-10 rounded-3xl space-y-6 text-gray-300 leading-relaxed">
-                <p><strong>Last Updated:</strong> December 26, 2025</p>
-                <p>By using the Private Scan mobile application, you agree to the following terms and conditions.</p>
-                
-                <h3 class="text-xl font-bold text-white">1. License Grant</h3>
-                <p>Private Scan grants you a personal, non-transferable license to use the software on your personal devices in accordance with the purchased tier (Basic, Monthly, Yearly, or Lifetime).</p>
-                
-                <h3 class="text-xl font-bold text-white">2. Usage Restrictions</h3>
-                <p>You may not attempt to reverse engineer the Rust engine, bypass licensing checks, or redistribute the application binaries without written consent from Private Scan Labs.</p>
-                
-                <h3 class="text-xl font-bold text-white">3. Payments and Refunds</h3>
-                <p>Monthly and Yearly subscriptions are billed through the Google Play Store. Lifetime access is a one-time purchase. Refunds are governed by the standard policies of the Google Play Store.</p>
-                
-                <h3 class="text-xl font-bold text-white">4. Disclaimer of Warranty</h3>
-                <p>The software is provided "as is". While we strive for 100% accuracy, Private Scan is not responsible for errors in text recognition or data loss occurring on the user's device.</p>
-                
-                <button onclick="navigateTo('home')" class="mt-8 text-brand-purple font-bold hover:underline">← Back to Home</button>
-            </div>
-        </div>
-    </div>
+    </main>
 
     <!-- Footer -->
     <footer class="py-20 border-t border-white/5 px-6">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
             <div>
-                <div class="flex items-center gap-2 mb-4 group cursor-pointer" onclick="navigateTo('home')">
+                <a href="index.html" class="flex items-center gap-2 mb-4 group">
                     <img src="app_icon.jpg" alt="Icon" class="w-8 h-8 rounded-lg object-cover" onerror="this.onerror=null; this.outerHTML='<div class=\'w-8 h-8 bg-brand-purple rounded-lg flex items-center justify-center font-black\'>P</div>';">
                     <span class="text-xl font-heading font-extrabold tracking-tight">Private Scan</span>
-                </div>
+                </a>
                 <p class="text-gray-500 text-xs max-w-xs">Built with Rust & Flutter for people who care about their privacy.</p>
             </div>
             <div class="flex gap-8 text-xs font-bold uppercase tracking-widest text-gray-500">
-                <button onclick="navigateTo('home')" class="hover:text-white transition">Home</button>
-                <button onclick="navigateTo('privacy')" class="hover:text-white transition">Privacy Policy</button>
-                <button onclick="navigateTo('terms')" class="hover:text-white transition">Terms of Service</button>
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <a href="privacy.html" class="hover:text-white transition">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
                 <a href="#" class="hover:text-white transition">Support</a>
             </div>
         </div>
@@ -345,27 +292,6 @@
     </footer>
 
     <script>
-        // Router Logic
-        function navigateTo(pageId) {
-            // Hide all pages
-            document.querySelectorAll('.page-content').forEach(page => page.classList.remove('active'));
-            
-            // Show requested page
-            const target = document.getElementById(pageId + '-page');
-            if (target) {
-                target.classList.add('active');
-                window.scrollTo(0, 0);
-            }
-
-            // Handle navigation visibility
-            const landingLinks = document.querySelectorAll('.landing-link');
-            if (pageId !== 'home') {
-                landingLinks.forEach(link => link.style.display = 'none');
-            } else {
-                landingLinks.forEach(link => link.style.display = 'block');
-            }
-        }
-
         // Scroll Animation Observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
